@@ -1,0 +1,37 @@
+[
+  {
+    "id": "TC01",
+    "type": "direct_query",
+    "question": "Chào bạn, bạn có thể giới thiệu quy chế học vụ cơ bản của Đại học VinUni không?",
+    "expected_behavior": "Chatbot trả lời trực tiếp từ System Prompt, không cần gọi bất kỳ Tool nào.",
+    "complexity": "Low"
+  },
+  {
+    "id": "TC02",
+    "type": "single_tool_query",
+    "question": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
+    "expected_behavior": "Agent nhận diện nhu cầu tra cứu, tự động phát sinh Tool Call 'academic_query' với mã SV2026001.",
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC03",
+    "type": "interview_notification",
+    "question": "Hãy gửi thông báo lịch phỏng vấn cho ứng viên Nguyễn Minh Anh ứng tuyển vị trí Data Analyst vào 09:00 ngày 18/09/2026.",
+    "expected_behavior": "Agent tự động phát sinh Tool Call gửi thông báo phỏng vấn với đúng tên ứng viên, vị trí ứng tuyển và thời gian phỏng vấn.",
+    "complexity": "Medium"
+  },
+  {
+    "id": "TC04",
+    "type": "multi_step_reasoning",
+    "question": "Ứng viên Trần Hoàng Nam ứng tuyển vị trí Backend Developer, có 3 năm kinh nghiệm Python, FastAPI, PostgreSQL và đã từng triển khai API nội bộ. Hãy tra cứu tiêu chí tuyển dụng vị trí này, đánh giá nhanh mức độ phù hợp, nếu đạt thì gửi thông báo phỏng vấn lúc 14:30 ngày 19/09/2026.",
+    "expected_behavior": "Agent thực hiện chuỗi suy luận ReAct: tra cứu tiêu chí tuyển dụng của vị trí Backend Developer, đối chiếu với thông tin CV, sau đó nếu phù hợp thì gọi Tool gửi thông báo phỏng vấn.",
+    "complexity": "High"
+  },
+  {
+    "id": "TC05",
+    "type": "edge_case_handling",
+    "question": "Hãy tra cứu tiêu chí tuyển dụng cho vị trí AI Talent và cho biết ứng viên A có phù hợp không.",
+    "expected_behavior": "Agent nhận kết quả từ Tool tra cứu tiêu chí tuyển dụng và đưa ra phản hồi lịch sự, chính xác, không bịa đặt dữ liệu.",
+    "complexity": "Medium"
+  }
+]
